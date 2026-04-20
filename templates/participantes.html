@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Participantes registrados</h2>
+
+<a href="/registro" class="btn btn-success mb-3">
+Nuevo registro
+</a>
+
+<table class="table table-striped">
+
+<thead>
+
+<tr>
+<th>ID</th>
+<th>Nombre</th>
+<th>Email</th>
+<th>Telefono</th>
+<th>Fecha</th>
+<th></th>
+<th></th>
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for p in participantes %}
+
+<tr>
+
+<td>{{ p.id }}</td>
+<td>{{ p.nombre }}</td>
+<td>{{ p.email }}</td>
+<td>{{ p.telefono }}</td>
+<td>{{ p.fecha_registro }}</td>
+
+<td>
+
+<a href="/editar/{{ p.id }}" class="btn btn-warning">
+Editar
+</a>
+
+</td>
+
+<td>
+
+<a href="/eliminar/{{ p.id }}" class="btn btn-danger">
+Eliminar
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Editar participante</h2>
+
+<form action="/actualizar" method="post">
+
+<input type="hidden" name="id" value="{{ participante.id }}">
+
+<div class="mb-3">
+
+<label>Nombre</label>
+
+<input type="text" name="nombre" class="form-control" value="{{ participante.nombre }}">
+
+</div>
+
+<div class="mb-3">
+
+<label>Email</label>
+
+<input type="email" name="email" class="form-control" value="{{ participante.email }}">
+
+</div>
+
+<div class="mb-3">
+
+<label>Telefono</label>
+
+<input type="text" name="telefono" class="form-control" value="{{ participante.telefono }}">
+
+</div>
+
+<div class="mb-3">
+
+<label>Fecha</label>
+
+<input type="date" name="fecha" class="form-control" value="{{ participante.fecha_registro }}">
+
+</div>
+
+<button class="btn btn-primary">Actualizar</button>
+
+</form>
+
+{% endblock %}

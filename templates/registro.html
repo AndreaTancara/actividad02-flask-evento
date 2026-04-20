@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Registro al evento</h2>
+
+<form action="/guardar" method="post">
+
+<div class="mb-3">
+
+<label>Nombre</label>
+
+<input type="text" name="nombre" class="form-control" required>
+
+</div>
+
+<div class="mb-3">
+
+<label>Email</label>
+
+<input type="email" name="email" class="form-control" required>
+
+</div>
+
+<div class="mb-3">
+
+<label>Telefono</label>
+
+<input type="text" name="telefono" class="form-control">
+
+</div>
+
+<div class="mb-3">
+
+<label>Fecha</label>
+
+<input type="date" name="fecha" class="form-control">
+
+</div>
+
+<button class="btn btn-success">Registrar</button>
+
+</form>
+
+{% endblock %}
